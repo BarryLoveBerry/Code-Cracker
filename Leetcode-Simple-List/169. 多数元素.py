@@ -1,0 +1,17 @@
+#哈希表
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        dic={} #创建哈希表
+        for num in nums:#遍历数组
+            if num in dic:#将出现的元素记录次数
+                dic[num]+=1
+            else:
+                dic[num]=1
+        big=0
+        index=0
+        for d in dic:#遍历字典
+            if dic[d]>big:
+                big=dic[d]
+                index=d#找到出现次数最多的key
+        return index
+
