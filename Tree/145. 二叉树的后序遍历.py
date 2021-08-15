@@ -17,12 +17,12 @@ class Solution:
         # backorder(root)
         # return res 
  #  迭代
-        ans = []
+        res = []
         if not root:
-            return ans
+            return res
 
         stack =[]
-        node = root
+        cur = root
         while stack or cur:
             while cur:
                 res.append(cur.val)
