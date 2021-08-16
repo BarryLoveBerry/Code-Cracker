@@ -20,7 +20,10 @@ class Solution:
         
         return min_depth+1
       
-#BFS
+#BFS 同样，我们可以想到使用广度优先搜索的方法，遍历整棵树。
+
+# 当我们找到一个叶子节点时，直接返回这个叶子节点的深度。广度优先搜索的性质保证了最先搜索到的叶子节点的深度一定最小。
+
 class Solution:
     def minDepth(self, root: TreeNode) -> int:
         if not root:
