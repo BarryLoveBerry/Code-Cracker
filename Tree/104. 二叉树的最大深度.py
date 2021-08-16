@@ -31,7 +31,7 @@ class Solution:
 # d.reverse() # 将队列倒序，此时 d=deque(['b', 'e', 'a'])
 class Solution:
     def maxDepth(self, root: TreeNode) -> int:
-        if not root:
+        if  root is None:
             return 0
         queue = collections.deque([root])
         depth = 0
