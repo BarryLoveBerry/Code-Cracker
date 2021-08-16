@@ -33,10 +33,10 @@ class Solution:
     def maxDepth(self, root: TreeNode) -> int:
         if  root is None:
             return 0
-        queue = collections.deque([root])
+        queue = collections.deque([root]) # 加入当前root节点【3】
         depth = 0
         while queue:
-            n = len(queue)
+            n = len(queue) 
             for i in range(n):
                 node = queue.popleft()
                 if node.left:
